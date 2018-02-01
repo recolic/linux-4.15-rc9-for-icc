@@ -670,7 +670,9 @@ static __always_inline void cpu_relax(void)
  * If you're calling this for a different reason, you're probably doing
  * it wrong.
  */
-static inline void sync_core(void)
+
+/** Recolic fix: make icc always inline **/
+static __always_inline inline void sync_core(void)
 {
 	/*
 	 * There are quite a few ways to do this.  IRET-to-self is nice

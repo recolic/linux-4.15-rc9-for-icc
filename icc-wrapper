@@ -1,0 +1,2 @@
+#!/usr/bin/sh
+icc -fno-strict-aliasing $*
