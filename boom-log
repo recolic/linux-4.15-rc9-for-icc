@@ -1,0 +1,215 @@
+
+In file included from ./include/linux/highmem.h(5),
+                 from arch/x86/lib/usercopy_64.c(10):
+./include/linux/fs.h(1731): warning #1292: unknown attribute "designated_init"
+  } __randomize_layout;
+    ^
+
+In file included from ./include/linux/irq.h(26),
+                 from ./arch/x86/include/asm/hardirq.h(6),
+                 from ./include/linux/hardirq.h(9),
+                 from ./include/linux/highmem.h(10),
+                 from arch/x86/lib/usercopy_64.c(10):
+./include/linux/slab.h(341): warning #1292: unknown attribute "__assume_aligned__"
+  void *__kmalloc(size_t size, gfp_t flags) __assume_kmalloc_alignment __malloc;
+                                            ^
+
+In file included from ./include/linux/irq.h(26),
+                 from ./arch/x86/include/asm/hardirq.h(6),
+                 from ./include/linux/hardirq.h(9),
+                 from ./include/linux/highmem.h(10),
+                 from arch/x86/lib/usercopy_64.c(10):
+./include/linux/slab.h(342): warning #1292: unknown attribute "__assume_aligned__"
+  void *kmem_cache_alloc(struct kmem_cache *, gfp_t flags) __assume_slab_alignment __malloc;
+                                                           ^
+
+In file included from ./include/linux/irq.h(26),
+                 from ./arch/x86/include/asm/hardirq.h(6),
+                 from ./include/linux/hardirq.h(9),
+                 from ./include/linux/highmem.h(10),
+                 from arch/x86/lib/usercopy_64.c(10):
+./include/linux/slab.h(365): warning #1292: unknown attribute "__assume_aligned__"
+  void *__kmalloc_node(size_t size, gfp_t flags, int node) __assume_kmalloc_alignment __malloc;
+                                                           ^
+
+In file included from ./include/linux/irq.h(26),
+                 from ./arch/x86/include/asm/hardirq.h(6),
+                 from ./include/linux/hardirq.h(9),
+                 from ./include/linux/highmem.h(10),
+                 from arch/x86/lib/usercopy_64.c(10):
+./include/linux/slab.h(366): warning #1292: unknown attribute "__assume_aligned__"
+  void *kmem_cache_alloc_node(struct kmem_cache *, gfp_t flags, int node) __assume_slab_alignment __malloc;
+                                                                          ^
+
+In file included from ./include/linux/irq.h(26),
+                 from ./arch/x86/include/asm/hardirq.h(6),
+                 from ./include/linux/hardirq.h(9),
+                 from ./include/linux/highmem.h(10),
+                 from arch/x86/lib/usercopy_64.c(10):
+./include/linux/slab.h(380): warning #1292: unknown attribute "__assume_aligned__"
+  extern void *kmem_cache_alloc_trace(struct kmem_cache *, gfp_t, size_t) __assume_slab_alignment __malloc;
+                                                                          ^
+
+In file included from ./include/linux/irq.h(26),
+                 from ./arch/x86/include/asm/hardirq.h(6),
+                 from ./include/linux/hardirq.h(9),
+                 from ./include/linux/highmem.h(10),
+                 from arch/x86/lib/usercopy_64.c(10):
+./include/linux/slab.h(385): warning #1292: unknown attribute "__assume_aligned__"
+  					   int node, size_t size) __assume_slab_alignment __malloc;
+  					                          ^
+
+In file included from ./include/linux/irq.h(26),
+                 from ./arch/x86/include/asm/hardirq.h(6),
+                 from ./include/linux/hardirq.h(9),
+                 from ./include/linux/highmem.h(10),
+                 from arch/x86/lib/usercopy_64.c(10):
+./include/linux/slab.h(418): warning #1292: unknown attribute "__assume_aligned__"
+  extern void *kmalloc_order(size_t size, gfp_t flags, unsigned int order) __assume_page_alignment __malloc;
+                                                                           ^
+
+In file included from ./include/linux/irq.h(26),
+                 from ./arch/x86/include/asm/hardirq.h(6),
+                 from ./include/linux/hardirq.h(9),
+                 from ./include/linux/highmem.h(10),
+                 from arch/x86/lib/usercopy_64.c(10):
+./include/linux/slab.h(421): warning #1292: unknown attribute "__assume_aligned__"
+  extern void *kmalloc_order_trace(size_t size, gfp_t flags, unsigned int order) __assume_page_alignment __malloc;
+                                                                                 ^
+
+In file included from ./include/linux/irqdesc.h(6),
+                 from ./include/linux/irq.h(522),
+                 from ./arch/x86/include/asm/hardirq.h(6),
+                 from ./include/linux/hardirq.h(9),
+                 from ./include/linux/highmem.h(10),
+                 from arch/x86/lib/usercopy_64.c(10):
+./include/linux/kobject.h(177): warning #1292: unknown attribute "designated_init"
+  } __randomize_layout;
+    ^
+
+In file included from ./arch/x86/include/asm/sections.h(5),
+                 from ./arch/x86/include/asm/hw_irq.h(29),
+                 from ./include/linux/irq.h(527),
+                 from ./arch/x86/include/asm/hardirq.h(6),
+                 from ./include/linux/hardirq.h(9),
+                 from ./include/linux/highmem.h(10),
+                 from arch/x86/lib/usercopy_64.c(10):
+./include/asm-generic/sections.h(52): warning #21: type qualifiers are meaningless in this declaration
+  extern __visible const void __nosave_begin, __nosave_end;
+                              ^
+
+In file included from ./arch/x86/include/asm/sections.h(5),
+                 from ./arch/x86/include/asm/hw_irq.h(29),
+                 from ./include/linux/irq.h(527),
+                 from ./arch/x86/include/asm/hardirq.h(6),
+                 from ./include/linux/hardirq.h(9),
+                 from ./include/linux/highmem.h(10),
+                 from arch/x86/lib/usercopy_64.c(10):
+./include/asm-generic/sections.h(52): warning #21: type qualifiers are meaningless in this declaration
+  extern __visible const void __nosave_begin, __nosave_end;
+                                              ^
+
+  AR      arch/x86/lib/lib.a
+  EXPORTS arch/x86/lib/lib-ksyms.o
+  AR      arch/x86/lib/built-in.o
+  AR      virt/lib/built-in.o
+  AR      virt/built-in.o
+  GEN     .version
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+icc: command line warning #10159: invalid argument for option '-m'
+icc: command line warning #10159: invalid argument for option '-m'
+icc: command line warning #10159: invalid argument for option '-m'
+icc: command line warning #10159: invalid argument for option '-m'
+icc: command line warning #10006: ignoring unknown option '-fno-function-sections'
+In file included from ./arch/x86/include/asm/cpufeature.h(5),
+                 from ./arch/x86/include/asm/thread_info.h(53),
+                 from ./include/linux/thread_info.h(38),
+                 from ./arch/x86/include/asm/preempt.h(7),
+                 from ./include/linux/preempt.h(81),
+                 from ./include/linux/rcupdate.h(40),
+                 from ./include/linux/rculist.h(11),
+                 from ./include/linux/pid.h(5),
+                 from ./include/linux/sched.h(14),
+                 from ./include/linux/utsname.h(6),
+                 from init/version.c(12):
+./arch/x86/include/asm/processor.h(136): warning #1292: unknown attribute "designated_init"
+  } __randomize_layout;
+    ^
+
+In file included from ./arch/x86/include/asm/cpufeature.h(5),
+                 from ./arch/x86/include/asm/thread_info.h(53),
+                 from ./include/linux/thread_info.h(38),
+                 from ./arch/x86/include/asm/preempt.h(7),
+                 from ./include/linux/preempt.h(81),
+                 from ./include/linux/rcupdate.h(40),
+                 from ./include/linux/rculist.h(11),
+                 from ./include/linux/pid.h(5),
+                 from ./include/linux/sched.h(14),
+                 from ./include/linux/utsname.h(6),
+                 from init/version.c(12):
+./arch/x86/include/asm/processor.h(675): warning #283: duplicate specifier in declaration
+  static __always_inline inline void sync_core(void)
+                         ^
+
+In file included from ./include/uapi/linux/sem.h(5),
+                 from ./include/linux/sem.h(9),
+                 from ./include/linux/sched.h(15),
+                 from ./include/linux/utsname.h(6),
+                 from init/version.c(12):
+./include/linux/ipc.h(31): warning #1292: unknown attribute "designated_init"
+  } ____cacheline_aligned_in_smp __randomize_layout;
+                                 ^
+
+In file included from ./include/linux/sched.h(15),
+                 from ./include/linux/utsname.h(6),
+                 from init/version.c(12):
+./include/linux/sem.h(46): warning #1292: unknown attribute "designated_init"
+  } __randomize_layout;
+    ^
+
+In file included from ./include/linux/sched.h(16),
+                 from ./include/linux/utsname.h(6),
+                 from init/version.c(12):
+./include/linux/shm.h(26): warning #1292: unknown attribute "designated_init"
+  } __randomize_layout;
+    ^
+
+In file included from ./include/linux/utsname.h(6),
+                 from init/version.c(12):
+./include/linux/sched.h(430): warning #1292: unknown attribute "designated_init"
+  } __randomize_layout;
+    ^
+
+In file included from ./include/linux/utsname.h(6),
+                 from init/version.c(12):
+./include/linux/sched.h(1095): warning #1292: unknown attribute "designated_init"
+  	randomized_struct_fields_end
+  	^
+
+In file included from init/version.c(12):
+./include/linux/utsname.h(30): warning #1292: unknown attribute "designated_init"
+  } __randomize_layout;
+    ^
+
+In file included from init/version.c(15):
+./include/linux/proc_ns.h(25): warning #1292: unknown attribute "designated_init"
+  } __randomize_layout;
+    ^
+
+  AR      init/built-in.o
+  AR      built-in.o
+  LD      vmlinux.o
+  MODPOST vmlinux.o
+WARNING: modpost: Found 5 section mismatch(es).
+To see full details build your kernel with:
+'make CONFIG_DEBUG_SECTION_MISMATCH=y'
+arch/x86/mm/ioremap.o: In function `early_memremap_is_setup_data':
+/home/recolic/Downloads/linux-4.15-rc9/arch/x86/mm/ioremap.c:623: undefined reference to `early_memremap_decrypted'
+drivers/gpu/drm/i915/i915_gem_request.o: In function `reserve_engine':
+/home/recolic/Downloads/linux-4.15-rc9/drivers/gpu/drm/i915/i915_gem_request.c:275: undefined reference to `__builtin_add_overflow_p'
+drivers/gpu/drm/i915/i915_gem_stolen.o: In function `i915_stolen_to_dma':
+/home/recolic/Downloads/linux-4.15-rc9/drivers/gpu/drm/i915/i915_gem_stolen.c:192: undefined reference to `__builtin_add_overflow_p'
+make: *** [Makefile:999: vmlinux] Error 1
+
