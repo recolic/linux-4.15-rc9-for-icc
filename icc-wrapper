@@ -1,11 +1,11 @@
-#!/usr/bin/sh
+#!/bin/bash
 
-ARGS=$@
+ARGS="$@"
 ICCARGS=""
-
-for ARG in $ARGS
+for ARG in ${ARGS};
 do
-    case $ARG in -mno-mmx | -mno-3dnow | -falign-jumps=1 | -funit-at-a-time | -Wno-frame-address | -Wno-format-truncation | -Wno-format-overflow | -Wno-int-in-bool-context | -Wframe-larger-than=2048 | -Wno-unused-const-variable | -fno-stack-check | -fconserve-stack)
+    case $ARG in
+-mno-mmx | -mno-3dnow | -falign-jumps=1 | -funit-at-a-time | -Wno-frame-address | -Wno-format-truncation | -Wno-format-overflow | -Wno-int-in-bool-context | -Wframe-larger-than=2048 | -Wno-unused-const-variable | -fno-stack-check | -fconserve-stack)
         ;;
     * )
         ICCARGS="$ICCARGS $ARG"
@@ -13,9 +13,6 @@ do
     esac
 done
 
-icc -fno-strict-aliasing $ICCARGS
-ret=$?
-
-[ $ret -ne 0 ] && echo ">>>>>icc-wrapper $ARGS<<<<<>>>>>icc $ICCARGS<<<<< failed with status $ret. Launching gcc..." && gcc $ICCARGS
-
+icc -fno-strict-aliasing ${ICCARGS} && exit 0
+echo ">>>>>icc-wrapper ${ARGS} <<<<<>>>>>icc ${ICCARGS} <<<<< failed with status $ret. Launching gcc..."  >> /tmp/fuck-icc.log && gcc ${ICCARGS}
 exit $?
