@@ -2,14 +2,17 @@
 
 ARGS="$@"
 ICCARGS=""
+
+echo "DEBUG> ${ARGS}" > /dev/fd/2
+
 for ARG in ${ARGS};
 do
     case $ARG in
-        -Wno-frame-address | -Wno-format-truncation | -Wno-format-overflow | -Wno-int-in-bool-context | -Wframe-larger-than=2048 | -Wno-unused-const-variable | -Wbad-function-cast | -Wformat-y2k | -Wnested-externs | -Wpacked | -Wredundant-decls | -Wswitch-default | -Wswitch-enum )
+        -Wno-frame-address | -Wno-format-truncation | -Wno-format-overflow | -Wno-int-in-bool-context | -Wframe-larger-than=2048 | -Wno-unused-const-variable | -Wbad-function-cast | -Wformat-y2k | -Wnested-externs | -Wpacked | -Wredundant-decls | -Wswitch-default | -Wswitch-enum | -Wno-switch-default | -Wno-switch-enum | -Wno-packed )
             # Safe
             ;;
-        -mno-mmx | -mno-3dnow | -funit-at-a-time | -ggdb3 | -fconserve-stack )
-            # Seems safe
+        -mno-mmx | -mno-3dnow | -funit-at-a-time | -ggdb3 | -fconserve-stack | -fno-inline-functions-called-once | -mskip-rax-setup | -mno-fp-ret-in-387 )
+            # Seems safe (removing `-mno-fp-ret-in-387` is dangerous!)
             ;;
         -falign-jumps=1 )
             ICCARGS+=" -fno-align-loops"
@@ -32,5 +35,7 @@ icc ${ICCARGS}
 ret=$?
 
 (( $ret == 0 )) && exit 0
-echo ">>>>>icc-wrapper ${ARGS} <<<<<>>>>>icc ${ICCARGS} <<<<< failed with status $ret. Launching gcc..."  >> /tmp/fuck-icc.log && gcc ${ARGS}
+echo ">>>>>icc-wrapper ${ARGS} <<<<<>>>>>icc ${ICCARGS} <<<<< failed with status $ret. Launching gcc..."  > /dev/fd/2
+exit 111
+gcc ${ARGS}
 exit $?
