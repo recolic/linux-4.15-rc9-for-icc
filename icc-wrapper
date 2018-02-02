@@ -3,6 +3,9 @@
 ARGS="$@"
 ICCARGS=""
 
+# ./arch/x86/mm/ioremap.c: seems like a bug?
+ARGS+=" -DCONFIG_ARCH_USE_MEMREMAP_PROT"
+
 echo "DEBUG> ${ARGS}" > /dev/fd/2
 
 for ARG in ${ARGS};
