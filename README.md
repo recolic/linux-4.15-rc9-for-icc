@@ -28,7 +28,7 @@ sudo reboot
 
 ### What have I gotten
 
-![Img: nginx server on icc-compiled kernel](https://recolic.net/tmp/snap-0202-221445.png)
+![Img: nginx server on icc-compiled kernel](https://recolic.net/tmp/snap-0202-221446.png)
 
 
 
