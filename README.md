@@ -6,6 +6,8 @@ Kernel version here is 4.15.0-rc9. You can just rebase my commits to your prefer
 
 It succeeded to run in my ubuntu 16.04 virtual machine, with some error messages printed to journal. But mostly speaking, it works pretty good.
 
+Tip: I don't think it's stable so think twice before deploying it.
+
 ### How to compile
 
 ```sh
